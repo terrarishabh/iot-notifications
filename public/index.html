@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoT Notifications</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+        <div id="auth-container" class="max-w-md mx-auto bg-white rounded-lg shadow-md p-6">
+            <h1 class="text-2xl font-bold mb-6 text-center">IoT Notifications</h1>
+            
+            <!-- Login Form -->
+            <form id="login-form" class="space-y-4">
+                <h2 class="text-xl font-semibold">Login</h2>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Phone</label>
+                    <input type="text" name="phone" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Password</label>
+                    <input type="password" name="password" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                </div>
+                <button type="submit" class="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">Login</button>
+                <p class="text-center">
+                    <a href="#" id="show-signup" class="text-blue-500 hover:text-blue-700">Need an account? Sign up</a>
+                </p>
+            </form>
+
+            <!-- Signup Form -->
+            <form id="signup-form" class="space-y-4 hidden">
+                <h2 class="text-xl font-semibold">Sign Up</h2>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Name</label>
+                    <input type="text" name="name" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Phone</label>
+                    <input type="text" name="phone" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Vehicle Number</label>
+                    <input type="text" name="vehicle_number" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Password</label>
+                    <input type="password" name="password" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                </div>
+                <button type="submit" class="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">Sign Up</button>
+                <p class="text-center">
+                    <a href="#" id="show-login" class="text-blue-500 hover:text-blue-700">Already have an account? Login</a>
+                </p>
+            </form>
+        </div>
+
+        <!-- Dashboard -->
+        <div id="dashboard" class="max-w-md mx-auto bg-white rounded-lg shadow-md p-6 hidden">
+            <h2 class="text-xl font-semibold mb-4">Dashboard</h2>
+            <p id="user-info" class="mb-4"></p>
+            <button id="logout" class="w-full bg-red-500 text-white py-2 px-4 rounded-md hover:bg-red-600">Logout</button>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
